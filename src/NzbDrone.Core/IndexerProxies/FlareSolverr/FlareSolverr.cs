@@ -101,6 +101,7 @@ namespace NzbDrone.Core.IndexerProxies.FlareSolverr
 
             var url = request.Url.ToString();
             var maxTimeout = Settings.RequestTimeout * 1000;
+            var session = Settings.SessionEnabled ? FlareSolverrSessionService.DefaultSession : null;
 
             var proxySettings = _proxySettingsProvider.GetProxySettings();
             var proxyUrl = proxySettings != null ? GetProxyUri(proxySettings) : null;
@@ -121,6 +122,10 @@ namespace NzbDrone.Core.IndexerProxies.FlareSolverr
                     MaxTimeout = maxTimeout,
                     Proxy = requestProxy
                 };
+                if (session != null)
+                {
+                    req.Session = session;
+                }
             }
             else if (request.Method == HttpMethod.Post)
             {
@@ -220,6 +225,7 @@ namespace NzbDrone.Core.IndexerProxies.FlareSolverr
         {
             public string Cmd { get; set; }
             public string Url { get; set; }
+            public string Session { get; set; }
             public Cookie[] Cookies { get; set; }
             public FlareSolverrProxy Proxy { get; set; }
         }
