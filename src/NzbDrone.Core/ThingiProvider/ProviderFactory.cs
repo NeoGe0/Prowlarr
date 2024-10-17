@@ -137,8 +137,9 @@ namespace NzbDrone.Core.ThingiProvider
 
         public void Delete(int id)
         {
+            var providerDefinition = _providerRepository.Get(id);
             _providerRepository.Delete(id);
-            _eventAggregator.PublishEvent(new ProviderDeletedEvent<TProvider>(id));
+            _eventAggregator.PublishEvent(new ProviderDeletedEvent<TProvider>(id, providerDefinition));
         }
 
         public void Delete(IEnumerable<int> ids)

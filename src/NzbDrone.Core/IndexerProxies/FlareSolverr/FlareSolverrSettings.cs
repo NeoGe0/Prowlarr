@@ -21,6 +21,7 @@ namespace NzbDrone.Core.IndexerProxies.FlareSolverr
         {
             Host = "http://localhost:8191/";
             RequestTimeout = 60;
+            SessionEnabled = false;
         }
 
         [FieldDefinition(0, Label = "Host")]
@@ -28,6 +29,9 @@ namespace NzbDrone.Core.IndexerProxies.FlareSolverr
 
         [FieldDefinition(2, Label = "Request Timeout", Advanced = true, HelpText = "FlareSolverr maxTimeout Request Parameter", Unit = "seconds")]
         public int RequestTimeout { get; set; }
+
+        [FieldDefinition(4, Label = "Session", Advanced = true, HelpText = "FlareSolverr session Request Parameter, if unchecked no session will be used", Type=FieldType.Checkbox)]
+        public bool SessionEnabled { get; set; }
 
         public NzbDroneValidationResult Validate()
         {
