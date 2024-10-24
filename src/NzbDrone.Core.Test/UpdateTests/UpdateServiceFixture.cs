@@ -35,18 +35,18 @@ namespace NzbDrone.Core.Test.UpdateTests
             {
                 _updatePackage = new UpdatePackage
                 {
-                    FileName = "NzbDrone.develop.2.0.0.0.tar.gz",
+                    FileName = "NzbDrone.develop.1.0.0.0.tar.gz",
                     Url = "http://download.sonarr.tv/v2/develop/mono/NzbDrone.develop.tar.gz",
-                    Version = new Version("2.0.0.0")
+                    Version = new Version("1.0.0.0")
                 };
             }
             else
             {
                 _updatePackage = new UpdatePackage
                 {
-                    FileName = "NzbDrone.develop.2.0.0.0.zip",
+                    FileName = "NzbDrone.develop.1.0.0.0.zip",
                     Url = "http://download.sonarr.tv/v2/develop/windows/NzbDrone.develop.zip",
-                    Version = new Version("2.0.0.0")
+                    Version = new Version("1.0.0.0")
                 };
             }
 
@@ -88,17 +88,6 @@ namespace NzbDrone.Core.Test.UpdateTests
             Mocker.GetMock<IDiskProvider>()
                   .Setup(s => s.FileExists(path, StringComparison.Ordinal))
                   .Returns(true);
-        }
-
-        [Test]
-        public void should_not_update_if_inside_docker()
-        {
-            Mocker.GetMock<IOsInfo>().Setup(x => x.IsDocker).Returns(true);
-
-            Subject.Execute(new ApplicationUpdateCommand());
-
-            Mocker.GetMock<IProcessProvider>()
-                .Verify(c => c.Start(It.IsAny<string>(), It.Is<string>(s => s.StartsWith("12")), null, null, null), Times.Never());
         }
 
         [Test]
@@ -336,6 +325,28 @@ namespace NzbDrone.Core.Test.UpdateTests
 
             Mocker.GetMock<IConfigFileProvider>()
                   .Verify(v => v.SaveConfigDictionary(It.Is<Dictionary<string, object>>(d => d.ContainsKey("Branch") && (string)d["Branch"] == "fake")), Times.Once());
+        }
+
+        [Test]
+        public void should_not_update_with_built_in_updater_inside_docker_container()
+        {
+            Mocker.GetMock<IDeploymentInfoProvider>().Setup(x => x.PackageUpdateMechanism).Returns(UpdateMechanism.Docker);
+
+            Subject.Execute(new ApplicationUpdateCommand());
+
+            Mocker.GetMock<IProcessProvider>()
+                .Verify(c => c.Start(It.IsAny<string>(), It.Is<string>(s => s.StartsWith("12")), null, null, null), Times.Never());
+        }
+
+        [Test]
+        public void should_not_update_with_built_in_updater_when_external_updater_is_configured()
+        {
+            Mocker.GetMock<IDeploymentInfoProvider>().Setup(x => x.IsExternalUpdateMechanism).Returns(true);
+
+            Subject.Execute(new ApplicationUpdateCommand());
+
+            Mocker.GetMock<IProcessProvider>()
+                .Verify(c => c.Start(It.IsAny<string>(), It.Is<string>(s => s.StartsWith("12")), null, null, null), Times.Never());
         }
 
         [TearDown]

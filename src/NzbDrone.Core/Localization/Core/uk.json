@@ -181,7 +181,7 @@
     "UILanguageHelpTextWarning": "Потрібно перезавантажити браузер",
     "UnableToAddANewIndexerPleaseTryAgain": "Не вдалося додати новий індексатор, спробуйте ще раз.",
     "UnableToAddANewNotificationPleaseTryAgain": "Не вдалося додати нове сповіщення, спробуйте ще раз.",
-    "UnableToLoadBackups": "Не вдалося завантажити резервні копії",
+    "BackupsLoadError": "Не вдалося завантажити резервні копії",
     "UnableToLoadUISettings": "Не вдалося завантажити налаштування інтерфейсу користувача",
     "UnsavedChanges": "Незбережені зміни",
     "UnselectAll": "Скасувати вибір усіх",
@@ -336,7 +336,7 @@
     "ApplicationLongTermStatusCheckSingleClientMessage": "Індексатори недоступні через збої більше 6 годин: {0}",
     "Remove": "Видалити",
     "Replace": "Замінити",
-    "TheLatestVersionIsAlreadyInstalled": "Остання версія {appName} вже встановлена",
+    "OnLatestVersion": "Остання версія {appName} вже встановлена",
     "ApplicationURL": "URL програми",
     "Theme": "Тема",
     "ApplyTagsHelpTextAdd": "Додати: додати теги до наявного списку тегів",
@@ -427,5 +427,14 @@
     "Any": "Будь-який",
     "BuiltIn": "Вбудований",
     "PublishedDate": "Дата публікації",
-    "AllSearchResultsHiddenByFilter": "Всі результати приховані фільтром"
+    "AllSearchResultsHiddenByFilter": "Всі результати приховані фільтром",
+    "AptUpdater": "Використовуйте apt для інсталяції оновлення",
+    "DockerUpdater": "Оновіть контейнер docker, щоб отримати оновлення",
+    "UpdateAppDirectlyLoadError": "Неможливо оновити {appName} безпосередньо,",
+    "Download": "Завантажити",
+    "ErrorRestoringBackup": "Помилка відновлення резервної копії",
+    "ExternalUpdater": "{appName} налаштовано на використання зовнішнього механізму оновлення",
+    "NoEventsFound": "Подій не знайдено",
+    "RestartReloadNote": "Примітка: {appName} автоматично перезапуститься та перезавантажить інтерфейс під час процесу відновлення.",
+    "InstallLatest": "Встановити останній"
 }

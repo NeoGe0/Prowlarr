@@ -127,6 +127,8 @@ namespace NzbDrone.Core.Applications
 
         private void SyncIndexers(List<IApplication> applications, List<IndexerDefinition> indexers, bool removeRemote = false, bool forceSync = false)
         {
+            var sortedIndexers = indexers.OrderBy(i => i.Name, StringComparer.OrdinalIgnoreCase).ToList();
+
             foreach (var app in applications)
             {
                 var indexerMappings = _appIndexerMapService.GetMappingsForApp(app.Definition.Id);
@@ -157,7 +159,7 @@ namespace NzbDrone.Core.Applications
                     }
                 }
 
-                foreach (var indexer in indexers)
+                foreach (var indexer in sortedIndexers)
                 {
                     var definition = indexer;
 

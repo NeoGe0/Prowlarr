@@ -270,7 +270,7 @@
     "UnableToLoadGeneralSettings": "Não foi possível carregar as definições gerais",
     "DownloadClientsLoadError": "Não foi possível carregar os clientes de transferências",
     "UnableToAddANewDownloadClientPleaseTryAgain": "Não foi possível adicionar um novo cliente de transferências, tenta novamente.",
-    "UnableToLoadBackups": "Não foi possível carregar as cópias de segurança",
+    "BackupsLoadError": "Não foi possível carregar as cópias de segurança",
     "UnableToAddANewNotificationPleaseTryAgain": "Não foi possível adicionar uma nova notificação, tenta novamente.",
     "UISettings": "Definições da IU",
     "UILanguageHelpTextWarning": "É preciso reiniciar o browser",
@@ -404,7 +404,7 @@
     "Queued": "Em fila",
     "Remove": "Remover",
     "Replace": "Substituir",
-    "TheLatestVersionIsAlreadyInstalled": "A versão mais recente do {appName} já está instalada",
+    "OnLatestVersion": "A versão mais recente do {appName} já está instalada",
     "AddSyncProfile": "Adicionar Perfil de Sincronização",
     "AddApplication": "Adicionar Aplicação",
     "AddCustomFilter": "Adicionar Filtro customizado",
@@ -492,5 +492,14 @@
     "BuiltIn": "Incorporado",
     "PublishedDate": "Data de publicação",
     "AllSearchResultsHiddenByFilter": "Todos os resultados foram ocultados pelo filtro aplicado",
-    "BlackholeFolderHelpText": "Pasta em que {appName} guardará o ficheiro {extension}."
+    "BlackholeFolderHelpText": "Pasta em que {appName} guardará o ficheiro {extension}.",
+    "AptUpdater": "Utilize o apt para instalar a atualização",
+    "DockerUpdater": "atualize o contentor do Docker para receber a atualização",
+    "Download": "Transferência",
+    "ErrorRestoringBackup": "Erro ao restaurar cópia de segurança",
+    "ExternalUpdater": "O {appName} está definido para usar um mecanismo de atualização externo",
+    "NoEventsFound": "Nenhum evento encontrado",
+    "RestartReloadNote": "Nota: o {appName} reiniciará e recarregará automaticamente a IU durante o processo de restauração.",
+    "UpdateAppDirectlyLoadError": "Não foi possível atualizar o {appName} diretamente,",
+    "InstallLatest": "Instalar o mais recente"
 }

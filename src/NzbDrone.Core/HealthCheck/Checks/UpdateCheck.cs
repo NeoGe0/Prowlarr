@@ -93,7 +93,7 @@ namespace NzbDrone.Core.HealthCheck.Checks
                 if (latestAvailable != null)
                 {
                     return new HealthCheck(GetType(),
-                        HealthCheckResult.Warning,
+                        BuildInfo.BuildDateTime.Before(DateTime.UtcNow.AddDays(-180)) ? HealthCheckResult.Error : HealthCheckResult.Warning,
                         _localizationService.GetLocalizedString("UpdateAvailableHealthCheckMessage", new Dictionary<string, object>
                         {
                             { "version", $"v{latestAvailable.Version}" }

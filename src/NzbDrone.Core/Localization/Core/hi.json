@@ -111,7 +111,7 @@
     "UnableToAddANewDownloadClientPleaseTryAgain": "नया डाउनलोड क्लाइंट जोड़ने में असमर्थ, कृपया पुनः प्रयास करें।",
     "UnableToAddANewIndexerPleaseTryAgain": "नया अनुक्रमणिका जोड़ने में असमर्थ, कृपया पुनः प्रयास करें।",
     "UnableToAddANewIndexerProxyPleaseTryAgain": "नया अनुक्रमणिका जोड़ने में असमर्थ, कृपया पुनः प्रयास करें।",
-    "UnableToLoadBackups": "बैकअप लोड करने में असमर्थ",
+    "BackupsLoadError": "बैकअप लोड करने में असमर्थ",
     "NoTagsHaveBeenAddedYet": "अभी तक कोई टैग नहीं जोड़े गए हैं",
     "Reddit": "reddit",
     "UpdateMechanismHelpText": "रेडर के बिल्ट इन अपडेटर या स्क्रिप्ट का उपयोग करें",
@@ -328,7 +328,7 @@
     "LastExecution": "अंतिम निष्पादन",
     "Queued": "कतारबद्ध",
     "Remove": "हटाना",
-    "TheLatestVersionIsAlreadyInstalled": "रेडर का नवीनतम संस्करण पहले से ही स्थापित है",
+    "OnLatestVersion": "रेडर का नवीनतम संस्करण पहले से ही स्थापित है",
     "Replace": "बदलने के",
     "More": "अधिक",
     "DeleteSelectedDownloadClients": "डाउनलोड क्लाइंट हटाएं",
@@ -360,5 +360,13 @@
     "BuiltIn": "में निर्मित",
     "Script": "लिपि",
     "PublishedDate": "प्रकाशित तिथि",
-    "AllSearchResultsHiddenByFilter": "सभी परिणाम लागू फ़िल्टर द्वारा छिपे हुए हैं"
+    "AllSearchResultsHiddenByFilter": "सभी परिणाम लागू फ़िल्टर द्वारा छिपे हुए हैं",
+    "AptUpdater": "अद्यतन स्थापित करने के लिए उपयुक्त का उपयोग करें",
+    "DockerUpdater": "अपडेट प्राप्त करने के लिए docker कंटेनर को अपडेट करें",
+    "Download": "डाउनलोड",
+    "ErrorRestoringBackup": "बैकअप बहाल करने में त्रुटि",
+    "NoEventsFound": "कोई घटना नहीं मिली",
+    "RestartReloadNote": "नोट: रैडियर स्वचालित रूप से पुनः आरंभ करेगा और पुनर्स्थापना प्रक्रिया के दौरान UI को फिर से लोड करेगा।",
+    "UpdateAppDirectlyLoadError": "सीधे {appName} अद्यतन करने में असमर्थ,",
+    "InstallLatest": "नवीनतम स्थापित करें"
 }

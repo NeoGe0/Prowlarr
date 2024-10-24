@@ -68,7 +68,7 @@
     "UILanguageHelpTextWarning": "חובה לטעון דפדפן",
     "UISettings": "הגדרות ממשק המשתמש",
     "UnableToAddANewAppProfilePleaseTryAgain": "לא ניתן להוסיף פרופיל איכות חדש, נסה שוב.",
-    "UnableToLoadBackups": "לא ניתן לטעון גיבויים",
+    "BackupsLoadError": "לא ניתן לטעון גיבויים",
     "UnableToLoadTags": "לא ניתן לטעון תגים",
     "UnableToLoadUISettings": "לא ניתן לטעון הגדרות ממשק משתמש",
     "UnsavedChanges": "שינויים שלא נשמרו",
@@ -371,7 +371,7 @@
     "EditSyncProfile": "הוספת פרופיל סינכרון",
     "Notifications": "התראות",
     "Notification": "התראות",
-    "TheLatestVersionIsAlreadyInstalled": "הגרסה האחרונה של {appName} כבר מותקנת",
+    "OnLatestVersion": "הגרסה האחרונה של {appName} כבר מותקנת",
     "Remove": "לְהַסִיר",
     "Replace": "החלף",
     "AddApplication": "הוספת אפליקציה",
@@ -418,5 +418,14 @@
     "AddCategory": "הוסף קטגוריה",
     "ActiveApps": "אפליקציות פעילות",
     "ActiveIndexers": "אינדקסרים פעילים",
-    "AllSearchResultsHiddenByFilter": "כל התוצאות מוסתרות על ידי המסנן שהוחל"
+    "AllSearchResultsHiddenByFilter": "כל התוצאות מוסתרות על ידי המסנן שהוחל",
+    "InstallLatest": "התקן את האחרונה",
+    "NoEventsFound": "לא נמצאו אירועים",
+    "DockerUpdater": "עדכן את מיכל העגינה לקבל את העדכון",
+    "Download": "הורד",
+    "ErrorRestoringBackup": "שגיאה בשחזור הגיבוי",
+    "ExternalUpdater": "{appName} מוגדר להשתמש במנגנון עדכון חיצוני",
+    "RestartReloadNote": "הערה: {appName} יופעל מחדש אוטומטית וטען מחדש את ממשק המשתמש במהלך תהליך השחזור.",
+    "UpdateAppDirectlyLoadError": "לא ניתן לעדכן את {appName} ישירות,",
+    "AptUpdater": "השתמש ב- apt כדי להתקין את העדכון"
 }
